@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Akshat Agrawal | Data Scientist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root {
+      --primary: #6f42c1;
+      --secondary: #0d6efd;
+      --bg: #f3f6fc;
+      --dark: #1a1a1a;
+      --light: #fff;
+      --accent: #20c997;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg);
+      color: var(--dark);
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 5%;
+      background: linear-gradient(to right, var(--secondary), var(--primary));
+      color: var(--light);
+      text-align: center;
+      animation: fadeIn 1s ease-out;
+    }
+
+    @media(min-width: 768px) {
+      header {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        padding: 60px 10%;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .intro {
+      max-width: 600px;
+      animation: slideLeft 1s ease-in-out;
+    }
+
+    @keyframes slideLeft {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .intro h1 {
+      font-size: 2.5em;
+    }
+
+    .intro p {
+      font-size: 1.1em;
+      margin-top: 10px;
+    }
+
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 5px solid var(--light);
+      margin-top: 20px;
+      animation: slideRight 1s ease-in-out;
+    }
+
+    @media(min-width: 768px) {
+      .profile-pic {
+        margin-top: 0;
+      }
+    }
+
+    @keyframes slideRight {
+      from { opacity: 0; transform: translateX(50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    .profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    nav {
+      background-color: var(--light);
+      padding: 12px 5%;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: bold;
+      transition: color 0.3s ease;
+      font-size: 1em;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    section {
+      padding: 50px 5%;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    section h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+      color: var(--primary);
+      position: relative;
+    }
+
+    section h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: var(--accent);
+      margin-top: 6px;
+      border-radius: 2px;
+    }
+
+    .card {
+      background-color: var(--light);
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+    }
+
+    .project {
+      border-left: 5px solid var(--accent);
+      padding-left: 15px;
+    }
+
+    .project h3 {
+      color: var(--secondary);
+    }
+
+    .skills ul {
+      list-style: none;
+      margin-left: 0;
+      padding-left: 0;
+    }
+
+    .skills li::before {
+      content: '\f111';
+      font-family: 'Font Awesome 6 Free';
+      font-weight: 900;
+      color: var(--accent);
+      margin-right: 10px;
+    }
+
+    .resume-btn {
+      margin-top: 15px;
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: var(--accent);
+      color: var(--light);
+      border: none;
+      border-radius: 6px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .resume-btn:hover {
+      background-color: #17b48a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px 10px;
+      background-color: var(--primary);
+      color: var(--light);
+    }
+
+    .contact a {
+      color: var(--secondary);
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Smooth scroll
+      const navLinks = document.querySelectorAll("nav a");
+      navLinks.forEach(link => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const id = link.getAttribute("href").substring(1);
+          document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+        });
+      });
+
+      // Scroll animations
+      const sections = document.querySelectorAll("section");
+      const revealOnScroll = () => {
+        const triggerBottom = window.innerHeight * 0.9;
+        sections.forEach(section => {
+          const sectionTop = section.getBoundingClientRect().top;
+          if (sectionTop < triggerBottom) {
+            section.classList.add("visible");
+          }
+        });
+      };
+      window.addEventListener("scroll", revealOnScroll);
+      revealOnScroll();
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <div class="intro">
+      <h1>Akshat Agrawal</h1>
+      <p>Aspiring Data Scientist | B.Tech CSE @ LPU</p>
+      <a href="/mnt/data/Akshat_Agrawal_Resume.pdf" class="resume-btn" download>Download Resume</a>
+    </div>
+    <div class="profile-pic">
+      <img src="/mnt/data/WhatsApp%20Image%202025-06-14%20at%209.58.19%20PM.jpeg" alt="Akshat Agrawal">
+    </div>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+      <p>I’m a final-year B.Tech Computer Science student at Lovely Professional University. I’m passionate about solving real-world problems using data-driven techniques. My interests include machine learning, predictive analytics, and data storytelling. I enjoy collaborating on technical projects, contributing to open-source, and continuously learning new technologies in the world of AI and data science.</p>
+    </div>
+  </section>
+
+  <section id="skills" class="skills">
+    <h2>Skills</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Programming Languages:</strong> Python (pandas, numpy, matplotlib, seaborn), SQL, C++, Java</li>
+        <li><strong>Data Science & Analysis:</strong> Exploratory Data Analysis, Hypothesis Testing, Feature Engineering, Model Building</li>
+        <li><strong>Machine Learning:</strong> Supervised & Unsupervised Learning, Scikit-learn, Regression, Classification</li>
+        <li><strong>Tools:</strong> Jupyter Notebook, Google Colab, Excel, Power BI, Git & GitHub</li>
+        <li><strong>Web Development:</strong> HTML, CSS, JavaScript, Dash, Flask (basic)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="card project">
+      <h3>Netflix Data Analysis</h3>
+      <p>This project involved cleaning and analyzing a large dataset of Netflix shows and movies. I used pandas and matplotlib to uncover trends like yearly content growth, genre distribution, and popular cast members. Created visual dashboards to present insights that can help Netflix content strategy teams.</p>
+    </div>
+    <div class="card project">
+      <h3>Excel Sales Dashboard</h3>
+      <p>Designed a highly interactive Excel dashboard for a retail dataset using pivot tables, slicers, dynamic KPIs, and conditional formatting. It allows business managers to filter sales by region, product, and time to gain quick performance insights and take data-driven decisions.</p>
+    </div>
+    <div class="card project">
+      <h3>Student Performance Predictor</h3>
+      <p>Developed a machine learning model using logistic regression and decision trees to predict student academic outcomes. Included detailed preprocessing, correlation analysis, and evaluation using confusion matrix and accuracy score. Built an intuitive dashboard to visualize the impact of features like study time and absences.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="card contact">
+      <p><i class="fas fa-envelope"></i> Email: <a href="mailto:akshatxyz@gmail.com">akshatxyz@gmail.com</a></p>
+      <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://linkedin.com/in/akshatxyz" target="_blank">linkedin.com/in/akshatxyz</a></p>
+      <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/akshatxyz" target="_blank">github.com/akshatxyz</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Akshat Agrawal | Crafted with 💡 & 💻</p>
+  </footer>
+</body>
+</html>
