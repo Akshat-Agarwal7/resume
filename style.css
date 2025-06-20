@@ -348,3 +348,52 @@ footer {
     font-size: 2.2rem;
   }
 }
+
+.skill:hover {
+  background-color: #005ccc;
+  transform: scale(1.08);
+}
+
+
+
+
+
+
+
+
+
+.cert-list a {
+  color: #333; /* neutral dark gray */
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.cert-list a:hover {
+  color: #0077ff;
+  text-decoration: underline;
+}
+
+/* Style certificate links */
+.cert-list a {
+  color: #222;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.25s ease-in-out;
+}
+
+/* Hover effect for links */
+.cert-list a:hover {
+  color: #0077ff;
+  text-decoration: underline;
+}
+
+/* Hover lift effect for entire cert card */
+.cert-list li {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cert-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
