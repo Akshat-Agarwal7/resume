@@ -356,30 +356,12 @@ footer {
 
 
 
-
-
-
-
-
-
-.cert-list a {
-  color: #333; /* neutral dark gray */
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.2s ease, text-decoration 0.2s ease;
-}
-
-.cert-list a:hover {
-  color: #0077ff;
-  text-decoration: underline;
-}
-
 /* Style certificate links */
 .cert-list a {
-  color: #222;
+  color: inherit; /* Inherit from surrounding li (neutral look) */
   text-decoration: none;
   font-weight: 500;
-  transition: all 0.25s ease-in-out;
+  transition: color 0.25s ease, text-decoration 0.25s ease;
 }
 
 /* Hover effect for links */
@@ -397,3 +379,6 @@ footer {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
+
+
+
